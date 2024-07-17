@@ -1,4 +1,17 @@
-<h2>Hello World</h2>
-<p>
-  The time is now: <%= Time.now %>
-</p>
+<%= render 'shared/header' %>
+
+<div class="main-container">
+  <%= image_tag 'welcome_1.jpg', class: 'img-fluid'%>
+  
+  <div class="login-container">
+    <div class="p-5 mb-4 col-md-6 offset-md-1 bg-body-tertiary rounded-3">
+      <div class="container-fluid py-1">
+        <h2 class="display-5 fw-bold welcome-title">初心者も達人も、みんなで釣りを楽しもう。</h2>
+        <p class="col-md-11 py-1 fs-4 welcome-about">「釣り」をもっとメジャーな趣味にしたい。<br>初心者から達人までみんなで楽しめるように、十人十色の楽しみ方をシェアできるサービスを作ってみました。<br>「みんなで楽しむ釣り」の世界、一緒に作りませんか？</p>
+        <button class="btn btn-primary btn-lg" type="button">ログイン</button>
+        <button class="btn btn-secondary btn-lg" type="button">新規登録</button>
+        <button class="btn btn-dark btn-lg" type="button">ゲストログイン</button>
+      </div>
+    </div>
+  </div>
+</div>
