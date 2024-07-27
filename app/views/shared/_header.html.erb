@@ -1,6 +1,13 @@
 <nav class="navbar navbar-white bg-white" aria-label="First navbar example">
 	<div class="container-fluid">
     <a class="navbar-brand" href="<%= root_path %>">釣り版Twitter(仮)</a>
+
+    <% if user_signed_in? %>
+      <%= link_to user_path(current_user), class: "d-flex align-items-center ms-auto user-icon" do %>
+        <i class="bi bi-person-circle user-icon"></i>
+      <% end %>
+    <% end %>  
+    
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
