@@ -6,6 +6,11 @@
 
 <% @posts.each do |post| %>
   <div>
+    <% if post.user.avatar.attached? %>
+      <%= image_tag post.user.avatar.variant(resize_to_fill: [50, 50]) %>
+    <% else %>
+      <%= image_tag 'kkrn_icon_user_1.png', size: "50x50" %>
+    <% end %>
     <p><strong><%= post.user.username %>:</strong> <%= post.content %></p>
   </div>
 <% end %>

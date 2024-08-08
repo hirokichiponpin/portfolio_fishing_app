@@ -9,7 +9,7 @@
     <% variant = @user.avatar.variant(resize_to_fill: [200, 200]) %>
     <%= image_tag variant.processed %>
   <% else %>
-    <p>No avatar available</p>
+		<%= image_tag 'kkrn_icon_user_1.png', size: "200x200" %>
   <% end %>
 </div>
 
