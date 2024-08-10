@@ -52,6 +52,7 @@ gem "devise"
 gem 'image_processing', '~> 1.2'
 gem "active_storage_validations"
 gem "aws-sdk-s3", require: false
+gem 'dotenv-rails'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
