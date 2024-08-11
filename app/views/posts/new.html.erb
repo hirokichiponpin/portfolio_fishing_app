@@ -1,9 +1,14 @@
 <h1>New Post</h1>
 
-<%= form_with(model: @post, local: true) do |form| %>
+<%= form_with(model: @post, local: true, multipart: true) do |form| %>
   <div>
     <%= form.label :content %>
     <%= form.text_area :content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :images %>
+    <%= form.file_field :images, multiple: true %>
   </div>
 
   <div>

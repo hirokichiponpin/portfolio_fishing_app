@@ -12,6 +12,14 @@
       <%= image_tag 'kkrn_icon_user_1.png', size: "50x50" %>
     <% end %>
     <p><strong><%= post.user.username %>:</strong> <%= post.content %></p>
+
+    <% if post.images.attached? %>
+      <div>
+        <% post.images.each do |image| %>
+          <%= image_tag image.variant(resize_to_limit: [200, 200]) %>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 <% end %>
 
