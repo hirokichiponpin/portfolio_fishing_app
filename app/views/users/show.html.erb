@@ -13,6 +13,11 @@
   <% end %>
 </div>
 
+<p>
+  <strong>説明文:</strong>
+  <%= @user.description %>
+</p>
+
 <p>Email: <%= @user.email %></p>
 <%= link_to "アカウント情報の編集", edit_user_registration_path %>
 <%= link_to '投稿一覧に戻る', posts_path %>
