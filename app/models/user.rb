@@ -8,4 +8,9 @@ class User < ApplicationRecord
   validates :username, presence: true
 
   has_one_attached :avatar
+
+  has_many :likes, dependent: :destroy
+  has_many :liked_posts, through: :likes, source: :post
+
+  has_many :replies, dependent: :destroy
 end
